@@ -26,12 +26,14 @@ body {
 
 header, main, footer {
     min-width: 320px;
+    max-width: 1350px;
 }
 
 .container {
     width: 60%;
     margin: 0 auto;
     padding: 10px 0;
+    display: flex;
 }
 
 .container > * {
@@ -66,7 +68,6 @@ header {
 
 header > .container {
     text-align: left;
-    display: flex;
     align-items: center;
 }
 
@@ -84,5 +85,23 @@ header > .container img {
 }
 
 /****************************** 3. MAIN ******************************/
+main > .container {
+    flex-direction: row;
+}
+
+main > .container > .edging {
+    border: 2px solid #000;
+    border-radius: 10px;
+    width: 100px;
+    background-color: #409;
+}
+
+main > .container > .edging + section {
+    margin-left: 5%;
+}
+
+main > .container > section {
+    width: 33%;
+}
 
 /****************************** 4. FOOTER ******************************/
