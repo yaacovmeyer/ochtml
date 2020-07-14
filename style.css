@@ -1,0 +1,88 @@
+@font-face { 
+	font-family: 'MyWebFont';
+	src: url('WebFont.eot');
+	src: url('WebFont.eot?iefix') format('eot'),
+	     url('WebFont.woff') format('woff'),
+	     url('WebFont.ttf') format('truetype'),
+	     url('WebFont.svg#webfont') format('svg');
+}
+
+/****************************** 1. Règles générales ******************************/
+* {
+    word-wrap: break-word;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Trebuchet, sans-serif;
+}
+
+body {
+    font-size: 100%;
+    line-height: 1.5;
+    background-image: url(background-website-01.jpg);
+    overflow-y: scroll;
+    text-align: center;
+}
+
+header, main, footer {
+    min-width: 320px;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.container > * {
+    padding: 0 3rem;
+}
+
+h1, h2 {
+    font-family: MyWebFont;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/****************************** 2. HEADER ******************************/
+header {
+    box-shadow: 0 0 4px 2px #402;
+}
+
+header > .container {
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+header > .container > h1 {
+    color: #584;
+    text-shadow: 2px 2px 2px #eac6d2, 2px 2px 2px #c1959e, -2px -2px 2px #b05f7e, 0 0 2px #862331, 2px 2px 6px #3c0a0a;
+}
+
+header > .container > a {
+    margin-left: auto;
+}
+
+header > .container img {
+    border: 1px solid #333;
+}
+
+/****************************** 3. MAIN ******************************/
+
+/****************************** 4. FOOTER ******************************/
