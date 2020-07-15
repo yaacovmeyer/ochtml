@@ -26,17 +26,15 @@ body {
 
 header, main, footer {
     min-width: 320px;
-    max-width: 1350px;
 }
 
 .container {
-    width: 60%;
+    width: 96%;
     margin: 0 auto;
     padding: 10px 0;
-    display: flex;
 }
 
-.container > * {
+.container > *:not(section) {
     padding: 0 3rem;
 }
 
@@ -66,18 +64,9 @@ header {
     box-shadow: 0 0 4px 2px #402;
 }
 
-header > .container {
-    text-align: left;
-    align-items: center;
-}
-
 header > .container > h1 {
     color: #584;
     text-shadow: 2px 2px 2px #eac6d2, 2px 2px 2px #c1959e, -2px -2px 2px #b05f7e, 0 0 2px #862331, 2px 2px 6px #3c0a0a;
-}
-
-header > .container > a {
-    margin-left: auto;
 }
 
 header > .container img {
@@ -85,23 +74,51 @@ header > .container img {
 }
 
 /****************************** 3. MAIN ******************************/
-main > .container {
-    flex-direction: row;
-}
-
-main > .container > .edging {
-    border: 2px solid #000;
-    border-radius: 10px;
-    width: 100px;
-    background-color: #409;
-}
-
-main > .container > .edging + section {
-    margin-left: 5%;
+main {
+    margin: 50px 0;
 }
 
 main > .container > section {
-    width: 33%;
+    background-color: #8c4450;
+    margin-top: 1rem;
+    padding: 1rem;
 }
 
 /****************************** 4. FOOTER ******************************/
+footer {
+    background-color: #81b350;
+}
+
+/****************************** 5. Média-queries ******************************/
+/*************** Pour Ordinateurs ***************/
+@media all and (min-width: 992px) {
+    /****************************** 1. Règles générales ******************************/
+    .container {
+        display: flex;
+        justify-content: center;
+        max-width: 1350px;
+    }
+
+    /****************************** 2. HEADER ******************************/
+    header > .container {
+        align-items: center;
+    }
+
+    header > .container > a {
+        margin-left: auto;
+    }
+
+    /****************************** 3. MAIN ******************************/
+    main > .container > .edging {
+        border: 2px solid #000;
+        border-radius: 10px;
+        width: 100px;
+        background-color: #409;
+    }
+
+    main > .container > section {
+        width: calc( (100% - 100px) / 3 );
+        margin-top: 0;
+        margin-left: 1rem;
+    }
+}
